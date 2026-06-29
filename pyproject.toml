@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "velestra-reader"
+version = "0.1.0"
+description = "Read-only local CLI helper for public Reddit content through OAuth."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  { name = "Andrian" }
+]
+keywords = ["reddit", "oauth", "cli", "reader"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Internet",
+  "Topic :: Utilities",
+]
+
+[project.scripts]
+velestra-reader = "velestra_reader.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
